@@ -42,4 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function notes()
+    {
+        return $this->hasMany(Note::class, 'created_by');
+    }
+
+    public function sharedNotes()
+    {
+        return $this->hasMany(SharedNote::class, 'created_by');
+    }
 }
