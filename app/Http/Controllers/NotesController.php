@@ -15,7 +15,7 @@ class NotesController extends Controller
      */
     public function index()
     {
-        $userId = Auth::id(); // Get the currently authenticated user's ID
+        $userId = Auth::id();
 
         $notes = Note::with('tags')
             ->where('created_by', $userId)
@@ -43,7 +43,7 @@ class NotesController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'body' => 'required',
-            'tags' => 'array', // Ensure that 'tags' is an array
+            'tags' => 'array',
         ]);
 
         // Create a new Note
@@ -98,7 +98,7 @@ class NotesController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'body' => 'required',
-            'tags' => 'array', // Ensure that 'tags' is an array
+            'tags' => 'array',
         ]);
 
         // Create a new Note

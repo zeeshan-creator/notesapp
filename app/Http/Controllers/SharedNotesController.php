@@ -13,12 +13,12 @@ class SharedNotesController extends Controller
      */
     public function index()
     {
-        // Retrieve the shared notes for the currently authenticated user
+        // Retrieve the shared notes
         $sharedNotes = SharedNote::where('shared_to', Auth::user()->id)
-            ->with('note') // Assuming you have a relationship to retrieve the associated notes
+            ->with('note')
+            ->with('createdUser')
             ->get();
 
-        // Pass the shared notes data to the "shared.index" view
         return view('shared_notes.index', ['sharedNotes' => $sharedNotes]);
     }
 
@@ -35,10 +35,10 @@ class SharedNotesController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the request data as needed
+        // Validation
         $request->validate([
             'note_id' => 'required|exists:notes,id',
-            'user_ids' => 'required|array', // user_ids should be an array of user IDs
+            'user_ids' => 'required|array',
         ]);
 
         $noteId = $request->input('note_id');
@@ -47,7 +47,6 @@ class SharedNotesController extends Controller
         $createdBy = Auth::user()->id;
 
         foreach ($userIds as $userId) {
-            // Check if a record with the same note_id and shared_to already exists
             $existingSharedNote = SharedNote::where('note_id', $noteId)
                 ->where('shared_to', $userId)
                 ->first();

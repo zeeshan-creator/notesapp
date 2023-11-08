@@ -22,6 +22,7 @@
                                         <th>#</th>
                                         <th>Title</th>
                                         <th>Body</th>
+                                        <th>Created by</th>
                                         {{-- <th>Tags</th> --}}
                                         <th>Date</th>
                                         <th>Actions</th>
@@ -34,6 +35,9 @@
                                             <td>{{ $sharedNote->note->title }}</td>
                                             <td>{{ $sharedNote->note->body }}</td>
                                             {{-- <td>{{ implode(', ', $note->tags->pluck('tag')->toArray()) }}</td> --}}
+                                            <td>
+                                                {{ $sharedNote->createdUser->name }}
+                                            </td>
                                             <td>{{ $sharedNote->note->created_at }}</td>
                                             <td>
                                                 <a class="btn btn-default"
@@ -42,7 +46,6 @@
                                         </tr>
                                     @endforeach
                                 </tbody>
-
                             </table>
                             <!-- datatable end -->
                         </div>

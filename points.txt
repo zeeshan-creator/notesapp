@@ -1,0 +1,17 @@
+Database design & ERD: -- Done ✅ --
+Users should be able to sign up, sign in, and sign out. -- Done ✅ --
+Users should be able to share their notes with other users. -- Done ✅ --
+Each note should have a title, body, and tags. -- Done ✅ --
+The dashboard should be built using PHP and a modern PHP framework (Laravel). -- Done ✅ --
+The dashboard should use MySQL. -- Done ✅ --
+Users should be able to create, view, update, and delete their notes. -- Done ✅ --
+
+The dashboard should allow users to search for notes by title, body, or tag.
+The dashboard should display all notes for the signed-in user, sorted by date and filterable by tag.
+
+Use of front-end frameworks (e.g., Angular, React JS).
+You should include unit tests and integration tests for the application.
+
+A GitHub repository -- Done ✅ --
+A README file
+A brief write-up on your approach to the task
