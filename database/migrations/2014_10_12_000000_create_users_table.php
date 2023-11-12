@@ -20,6 +20,11 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // Index for the 'users' table
+        Schema::table('users', function (Blueprint $table) {
+            $table->index('email');
+        });
     }
 
     /**

@@ -13,12 +13,17 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title', 255);
             $table->text('body');
             $table->unsignedBigInteger('created_by');
             $table->timestamps();
 
             $table->foreign('created_by')->references('id')->on('users');
+
+            $table->index('created_by');
+            $table->index('created_at');
+            $table->index('title');
+            $table->index('body');
         });
     }
 

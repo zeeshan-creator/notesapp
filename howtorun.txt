@@ -1,0 +1,8 @@
+clone the project
+composer i
+npmn i
+npm run dev
+copy .env.example .env
+php artisan key:generate
+change the database creds
+php artisan migrate

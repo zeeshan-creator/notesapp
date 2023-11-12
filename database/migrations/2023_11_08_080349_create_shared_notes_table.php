@@ -21,6 +21,10 @@ return new class extends Migration
             $table->foreign('note_id')->references('id')->on('notes');
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('shared_to')->references('id')->on('users');
+
+            $table->index('note_id');
+            $table->index('created_by');
+            $table->index('shared_to');
         });
     }
 

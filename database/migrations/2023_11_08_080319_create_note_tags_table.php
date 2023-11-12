@@ -19,6 +19,9 @@ return new class extends Migration
 
             $table->foreign('note_id')->references('id')->on('notes');
             $table->foreign('tag_id')->references('id')->on('tags');
+
+            $table->index('note_id');
+            $table->index('tag_id');
         });
     }
 

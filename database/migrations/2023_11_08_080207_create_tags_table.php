@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('tag');
             $table->timestamps();
+
+            $table->index('tag');
         });
     }
 
