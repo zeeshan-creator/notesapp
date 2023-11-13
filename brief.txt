@@ -1,0 +1,9 @@
+Things that can be improved.
+
+Ajax Datatable
+Ajax search for Users drop down (shared notes)
+Filterable tags
+React components
+Unit tests
+Git Branches
+proper git commit messages

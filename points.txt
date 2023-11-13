@@ -13,5 +13,5 @@ Use of front-end frameworks (e.g., Angular, React JS).
 You should include unit tests and integration tests for the application.
 
 A GitHub repository -- Done ✅ --
-A README file
+A README file -- Done ✅ --
 A brief write-up on your approach to the task
