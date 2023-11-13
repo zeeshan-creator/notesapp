@@ -67,7 +67,7 @@ Make sure you have the following tools installed on your system:
 
     ```bash
     php artisan migrate
-    ```
+    c
 
 ### Run the Application
 
@@ -75,3 +75,8 @@ To start the Laravel development server, run the following command:
 
 ```bash
 php artisan serve
+```
+
+### Description
+
+A note's App, you can add, edit, delete and share your notes. I used laravel & mysql, I could use react components but my first approch is to complete the task then making it better. I used indexes in the mysql tables for quick fetching of notes. I also included the database ERD in the git repo above. I also could use ajax on datatables on notes list so it won't put load on the page as if there's going to be thousands of notes. And while sharing the note with there can be a ajax search because there's going to be a million users.
